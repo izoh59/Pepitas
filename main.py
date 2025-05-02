@@ -8,6 +8,8 @@ import io
 import os
 import re
 import json
+from dotenv import load_dotenv
+load_dotenv()
 
 # --- Configuration des intents ---
 intents = discord.Intents.default()
@@ -518,5 +520,5 @@ async def on_message(message):
     await bot.process_commands(message)
 
 # --- Lancement du bot ---
-token = os.environ['TOKEN_PEPITAS']
+token = os.getenv('TOKEN_PEPITAS')
 bot.run(token)

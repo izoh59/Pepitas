@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Redémarrer le bot (pepitas-bot)",
+      "type": "shell",
+      "command": "sudo systemctl restart pepitas-bot",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always"
+      }
+    },
+    {
+      "label": "Voir les logs du bot (pepitas-bot)",
+      "type": "shell",
+      "command": "journalctl -u pepitas-bot.service --no-pager -n 50",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always"
+      }
+    }
+  ]
+}
+
